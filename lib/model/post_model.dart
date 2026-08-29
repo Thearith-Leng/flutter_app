@@ -7,8 +7,15 @@ class PostModel {
 
   final String title;
   final String imageUrl;
-  final String? author;
+  final UserModel? author;
 
+  String get fullImageUrl => imageUrl;
 
+}
+
+class UserModel {
+  const UserModel ({required this.displayName});
+
+  final String displayName;
 
 }
