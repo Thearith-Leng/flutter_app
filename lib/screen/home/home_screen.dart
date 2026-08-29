@@ -10,39 +10,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     final HomeController controller = Get.put(HomeController());
-    // final List<SliderModel> banners = <SliderModel>[
-    //   SliderModel(
-    //     title: 'Welcome to GetX Basic',
-    //     subtitle: 'Learn flutter with GetX',
-    //     imageUrl: 'https://picsum.photos/800/400?random=1',
-    //   ),
-    //   SliderModel(
-    //     title: 'Flutter Development',
-    //     subtitle: 'Build modern mobile applications',
-    //     imageUrl: 'https://picsum.photos/800/400?random=2',
-    //   ),
-    //   SliderModel(
-    //     title: 'GetX State Management',
-    //     subtitle: 'Simple and powerful state management',
-    //     imageUrl: 'https://picsum.photos/800/400?random=3',
-    //   ),
-    // ];
-    //
-    // final List<PostModel> latestPosts = <PostModel>[
-    //   PostModel(
-    //     title: 'Getting Started with Flutter',
-    //     imageUrl: 'https://picsum.photos/200/200?random=10',
-    //   ),
-    //   PostModel(
-    //     title: 'Understanding GetX',
-    //     imageUrl: 'https://picsum.photos/200/200?random=11',
-    //   ),
-    //   PostModel(
-    //     title: 'Flutter Navigation',
-    //     imageUrl: 'https://picsum.photos/200/200?random=12',
-    //   ),
-    // ];
 
     return Scaffold(
       backgroundColor: Colors.white,
