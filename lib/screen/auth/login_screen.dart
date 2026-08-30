@@ -7,10 +7,20 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Center(
-        child: Text(
-          'Login Screen',
-          style: Theme.of(context).textTheme.headlineMedium,
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(
+          image: const DecorationImage(
+            image: AssetImage('assets/images/background.jpg'),
+            fit: BoxFit.cover,
+          ),
+        ),
+        child: Center(
+          child: Text(
+            'Login Screen',
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
         ),
       ),
     );

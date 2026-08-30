@@ -10,18 +10,18 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final HomeController controller = Get.put(HomeController());
 
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          'Home Screen',
+          'Home Screen'.tr,
           style: TextStyle(
             color: Colors.white,
             fontSize: 20,
             fontWeight: FontWeight.bold,
+            fontFamily: 'NotoSansKhmer',
           ),
         ),
         backgroundColor: Colors.green,
@@ -106,12 +106,13 @@ class HomeScreen extends StatelessWidget {
                       size: 30,
                       color: Colors.blueGrey,
                     ),
-                    title: const Text(
-                      'Users',
+                    title: Text(
+                      'Users'.tr,
                       style: TextStyle(
                         color: Colors.blueGrey,
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
+                          fontFamily: 'NotoSansKhmer'
                       ),
                     ),
                     // onTap: (){},
@@ -124,12 +125,13 @@ class HomeScreen extends StatelessWidget {
                       size: 30,
                       color: Colors.blueGrey,
                     ),
-                    title: const Text(
-                      'New user',
+                    title: Text(
+                      'New user'.tr,
                       style: TextStyle(
                         color: Colors.blueGrey,
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
+                          fontFamily: 'NotoSansKhmer'
                       ),
                     ),
                     // onTap: () {},
@@ -144,23 +146,59 @@ class HomeScreen extends StatelessWidget {
                       size: 30,
                       color: Colors.blueGrey,
                     ),
-                    title: const Text(
-                      'Language',
+                    title: Text(
+                      'Language'.tr,
                       style: TextStyle(
                         color: Colors.blueGrey,
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
+                          fontFamily: 'NotoSansKhmer'
                       ),
                     ),
                     trailing: Text(
-                      'English',
+                      Get.locale?.languageCode == 'km'
+                          ? 'ភាសាខ្មែរ'
+                          : 'English',
                       style: TextStyle(
                         color: Colors.green,
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
+                          fontFamily: 'NotoSansKhmer'
                       ),
                     ),
-                    //onTap: () {},
+                    onTap: () {
+                      Get.defaultDialog(
+                        title: 'Select Language'.tr,
+                        content: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            ListTile(
+                              leading: const Text(
+                                'EN',
+                                style: TextStyle(fontSize: 20),
+                              ),
+                              title: Text('English',style: TextStyle(fontSize: 20)),
+                              onTap: () {
+                                Get.updateLocale(const Locale('en', 'US'));
+                                Get.back();
+                              },
+                            ),
+
+                            ListTile(
+                              leading: const Text(
+                                'KH',
+                                style: TextStyle(fontSize: 20),
+                              ),
+                              title: Text('ភាសាខ្មែរ', style: TextStyle(fontSize: 20, fontFamily: 'NotoSansKhmer')),
+                              onTap: () {
+                                Get.updateLocale(const Locale('km', 'KH'));
+                                Get.back();
+                              },
+                            ),
+                          ],
+                        ),
+                      );
+                    },
                   ),
 
                   // Connection
@@ -170,20 +208,22 @@ class HomeScreen extends StatelessWidget {
                       size: 30,
                       color: Colors.lightGreen,
                     ),
-                    title: const Text(
-                      'Connection',
+                    title: Text(
+                      'Connection'.tr,
                       style: TextStyle(
                         color: Colors.blueGrey,
                         fontSize: 18,
                         fontWeight: FontWeight.w500,
+                          fontFamily: 'NotoSansKhmer'
                       ),
                     ),
                     trailing: Text(
-                      'Online',
+                      'Online'.tr,
                       style: TextStyle(
                         color: Colors.lightGreen,
                         fontSize: 17,
                         fontWeight: FontWeight.bold,
+                          fontFamily: 'NotoSansKhmer'
                       ),
                     ),
                   ),
@@ -204,12 +244,13 @@ class HomeScreen extends StatelessWidget {
                 size: 30,
                 color: Colors.redAccent,
               ),
-              title: const Text(
-                'Logout',
+              title: Text(
+                'Logout'.tr,
                 style: TextStyle(
                   color: Colors.redAccent,
                   fontSize: 18,
                   fontWeight: FontWeight.w500,
+                    fontFamily: 'NotoSansKhmer'
                 ),
               ),
               //onTap: () {},
@@ -223,9 +264,7 @@ class HomeScreen extends StatelessWidget {
           // Loading
           // =========================
           if (controller.isLoading.value) {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
+            return const Center(child: CircularProgressIndicator(color: Colors.green));
           }
 
           return ListView(
@@ -242,7 +281,7 @@ class HomeScreen extends StatelessWidget {
                     margin: const EdgeInsets.symmetric(horizontal: 4),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(16),
-                      color: Colors.greenAccent,
+                      color: Colors.lightGreenAccent,
                     ),
                     clipBehavior: Clip.antiAlias,
                     child: Stack(
@@ -270,7 +309,10 @@ class HomeScreen extends StatelessWidget {
                             gradient: LinearGradient(
                               begin: Alignment.center,
                               end: Alignment.bottomCenter,
-                              colors: <Color>[Colors.transparent, Colors.black54],
+                              colors: <Color>[
+                                Colors.transparent,
+                                Colors.black54,
+                              ],
                             ),
                           ),
                         ),
@@ -332,8 +374,8 @@ class HomeScreen extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: Text(
-                  'Latest Posts',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  'Latest Posts'.tr,
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, fontFamily: 'NotoSansKhmer'),
                 ),
               ),
 
@@ -364,8 +406,8 @@ class HomeScreen extends StatelessWidget {
                               fit: BoxFit.cover,
                               errorBuilder: (_, _, _) {
                                 return const ColoredBox(
-                                  color: Colors.greenAccent,
-                                  child: Icon(Icons.article_outlined),
+                                  color: Colors.lightGreenAccent,
+                                  child: Icon(Icons.article_outlined, color: Colors.green),
                                 );
                               },
                             ),
@@ -396,8 +438,8 @@ class HomeScreen extends StatelessWidget {
                               Text(
                                 post.author?.displayName ?? 'Unknown',
                                 style: const TextStyle(
-                                    fontSize: 13,
-                                    color: Colors.grey
+                                  fontSize: 13,
+                                  color: Colors.grey,
                                 ),
                                 maxLines: 1,
                                 overflow: TextOverflow.ellipsis,

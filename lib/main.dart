@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/core/translation/app_translation.dart';
+import 'package:flutter_app/screen/auth/login_screen.dart';
 import 'package:flutter_app/screen/main_screen.dart';
+import 'package:flutter_app/screen/post/post_list_screen.dart';
+import 'package:flutter_app/screen/post/post_create_screen.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +16,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -32,7 +37,16 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: .fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MainScreen(),
+      locale: const Locale('km', 'KH'),
+      fallbackLocale: const Locale('en', 'US'),
+      translations: AppTranslation(),
+      getPages: [
+        GetPage(name: '/', page: () => const MainScreen()),
+        GetPage(name: '/login', page: () => const LoginScreen()),
+        GetPage(name: '/post', page: () => const PostListScreen()),
+        GetPage(name: '/post_create', page: () => const PostCreateScreen()),
+      ],
+      initialRoute: '/',
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class UserScreen extends StatelessWidget {
   const UserScreen({super.key});
@@ -7,15 +8,17 @@ class UserScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('User Screen',
-        style: TextStyle(
+        title: Text(
+          'User Screen'.tr,
+          style: TextStyle(
             color: Colors.white,
             fontSize: 20,
-            fontWeight: FontWeight.bold
+            fontWeight: FontWeight.bold,
+            fontFamily: 'NotoSansKhmer',
           ),
         ),
         backgroundColor: Colors.green,
-        iconTheme: IconThemeData(color: Colors.white)
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       backgroundColor: Colors.white,
       body: Center(
