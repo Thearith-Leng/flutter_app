@@ -13,6 +13,7 @@ class AppTranslation extends Translations {
       'New Post': 'New Post',
       'Latest Posts': 'Latest Posts',
       'Search posts...': 'Search posts...',
+      'Post Create Screen' :'Post Create Screen',
 
       'User': 'User',
       'User Screen': 'User Screen',
@@ -32,7 +33,12 @@ class AppTranslation extends Translations {
       'Logout': 'Logout',
 
       'Edit': 'Edit',
-      'Delete': 'Delete'
+      'Delete': 'Delete',
+
+      'Log In': 'Log In',
+      'Enter your Email': 'Enter your Email',
+      'Enter your Password': 'Enter your Password',
+      'Do not have an account? Register': 'Do not have an account? Register',
     },
     'km_KH': {
       'Home': 'ទំព័រដើម',
@@ -43,6 +49,7 @@ class AppTranslation extends Translations {
       'New Post': 'បង្កើតអត្ថបទ',
       'Latest Posts': 'អត្ថបទថ្មីៗ',
       'Search posts...': 'ស្វែងរកអត្ថបទ...',
+      'Post Create Screen' :'បង្កើតអត្ថបទថ្មី',
 
       'User': 'អ្នកប្រើប្រាស់',
       'User Screen': 'អ្នកប្រើប្រាស់',
@@ -62,7 +69,12 @@ class AppTranslation extends Translations {
       'Logout': 'ចាកចេញ',
 
       'Edit': 'កែប្រែ',
-      'Delete': 'លុប'
+      'Delete': 'លុប',
+
+      'Log In': 'ចូលគណនី',
+      'Enter your Email': 'បញ្ជូលអ៊ីម៉ែលរបស់អ្នក',
+      'Enter your Password': 'បញ្ជូលពាក្យសម្ងាត់របស់អ្នក',
+      'Do not have an account? Register': 'មិនទាន់មានគណនីមែនទេ? បង្កើតគណនី',
     },
   };
 }

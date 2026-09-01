@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class PostCreateScreen extends StatelessWidget {
   const PostCreateScreen({super.key});
@@ -7,11 +8,12 @@ class PostCreateScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Post Create Screen',
+        title: Text('Post Create Screen'.tr,
           style: TextStyle(
               color: Colors.white,
               fontSize: 20,
-              fontWeight: FontWeight.bold
+              fontWeight: FontWeight.bold,
+            fontFamily: 'NotoSansKhmer',
           ),
         ),
         backgroundColor: Colors.green,
