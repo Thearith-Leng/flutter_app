@@ -131,7 +131,7 @@ class LoginScreen extends StatelessWidget {
                             Icon(Icons.login, size: 25),
                             SizedBox(width: 8),
                             Text(
-                              'Log In',
+                              'Log In'.tr,
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,

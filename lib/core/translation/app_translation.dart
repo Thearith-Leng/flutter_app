@@ -39,6 +39,16 @@ class AppTranslation extends Translations {
       'Enter your Email': 'Enter your Email',
       'Enter your Password': 'Enter your Password',
       'Do not have an account? Register': 'Do not have an account? Register',
+
+      'Tap here to upload an image': 'Tap here to upload an image',
+      'The image will be uploaded after post is created': 'The image will be uploaded after post is created.',
+      'Title': 'Title',
+      'Enter your title': 'Enter your title',
+      'Content': 'Content',
+      'Write your content...': 'Write your content...',
+      'Published': 'Published',
+      'Visible to everyone': 'Visible to everyone',
+      'Create Post': 'Create Post',
     },
     'km_KH': {
       'Home': 'ទំព័រដើម',
@@ -75,6 +85,16 @@ class AppTranslation extends Translations {
       'Enter your Email': 'បញ្ជូលអ៊ីម៉ែលរបស់អ្នក',
       'Enter your Password': 'បញ្ជូលពាក្យសម្ងាត់របស់អ្នក',
       'Do not have an account? Register': 'មិនទាន់មានគណនីមែនទេ? បង្កើតគណនី',
+
+      'Tap here to upload an image': 'ចុចទីនេះដើម្បីបញ្ជូលរូបភាព',
+      'The image will be uploaded after post is created': 'រូបភាពនឹងផ្ទុកឡើងបន្ទាប់ពីបង្កើតអត្ថបទ',
+      'Title': 'ចំណងជើង',
+      'Enter your title': 'បញ្ជូលចំណងជើងអត្ថបទ',
+      'Content': 'មាតិកា',
+      'Write your content...': 'សរសេរមាតិការបស់អ្នក...',
+      'Published': 'បានផ្សាយ',
+      'Visible to everyone': 'មើលឃើញដោយអ្នកទាំងអស់គ្នា',
+      'Create Post': 'បង្កើតអត្ថបទ',
     },
   };
 }

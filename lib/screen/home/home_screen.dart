@@ -253,7 +253,9 @@ class HomeScreen extends StatelessWidget {
                     fontFamily: 'NotoSansKhmer'
                 ),
               ),
-              //onTap: () {},
+              onTap: () {
+                Get.toNamed('/login');
+              },
             ),
           ],
         ),
